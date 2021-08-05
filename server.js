@@ -14,9 +14,9 @@ app.get('/helloworld', (req, res) => {
     res.json({ body: "helloworld" });
 
     const kitty = new Cat({ name: 'Butterbeans' });
-    kitty.save().then(() => console.log('meow'));
+    kitty.save().then(() => console.log('meow')).catch((err) => {console.log(err)})
 
-});
+})
 
 // Listening for requests on the PORT
 app.listen(PORT, () => {
